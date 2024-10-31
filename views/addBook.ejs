@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+<body>
+  <h1><%= title %></h1>
+  <%- include("partials/errors.ejs") %>
+
+  <form action="/addBook" method="POST">
+    <label for="name">Title: </label>
+    <input type="text" name="name" id="name" required>
+    <label for="author">Author: </label>
+    <input type="text" name="author" id="author" required>
+    <label for="genre">Genre: </label>
+    <select name="genre" id="genre">
+      <% genres.forEach(genre => { %>
+      <option value="<%= genre.genre_name %>"><%= genre.genre_name %></option>
+      <% }); %>
+    </select>
+    <button type="submit">Add</button>
+  </form>
+  <a href="/">Back to Homepage</a>
+  <a href="/addGenre">Add a genre</a>
+  <a href="/addAuthor">Add an author</a>
+
+</body>
+</html>

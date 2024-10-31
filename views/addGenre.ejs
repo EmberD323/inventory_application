@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+<body>
+  <h1><%= title %></h1>
+  <%- include("partials/errors.ejs") %>
+  <form action="/addGenre" method="POST">
+    <label for="genre">Genre: </label>
+    <input type="text" name="genre" id="genre" required>
+    <button type="submit">Add</button>
+  </form>
+  <a href="/">Back to Homepage</a>
+</body>
+</html>
