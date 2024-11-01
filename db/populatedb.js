@@ -39,15 +39,11 @@ VALUES
 
 INSERT INTO books (name,authorid,genreid) 
 VALUES
-     ('one-star romance',(SELECT id from authors where author_name = 'laura harkin'),(SELECT id from genres where genre_name = 'romance'));
+     ('one-star romance',(SELECT id from authors where author_name = 'laura harkin'),(SELECT id from genres where genre_name = 'romance')),
+     
+     
+     ;
 
-INSERT INTO books (name,authorid,genreid) 
-VALUES
-     ('example',(SELECT id from authors where author_name = 'robin hobb'),(SELECT id from genres where genre_name = 'fantasy'));
-
-INSERT INTO books (name,authorid,genreid) 
-VALUES
-     ('example2',(SELECT id from authors where author_name = 'alice oseman'),(SELECT id from genres where genre_name = 'graphic novel'));
 `;
 
 
