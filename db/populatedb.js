@@ -5,7 +5,6 @@ const { Client } = require("pg");
 const SQL = `
 DROP TABLE IF EXISTS books,authors,genres;
 
-
 CREATE TABLE IF NOT EXISTS authors (
   id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
   author_name TEXT
@@ -39,7 +38,7 @@ VALUES
 
 INSERT INTO books (name,authorid,genreid) 
 VALUES
-     ('one-star romance',(SELECT id from authors where author_name = 'laura harkin'),(SELECT id from genres where genre_name = 'romance')),
+     ('one-star romance',(SELECT id from authors where author_name = 'laura harkin'),(SELECT id from genres where genre_name = 'romance'))
      
      
      ;
